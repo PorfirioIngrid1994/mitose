@@ -1,0 +1,33 @@
+#Definindo a fase da Intérfase
+class Celula:
+    def __init__(self):
+        self.cromossomos = 46
+        self.momento = 'intérfase'
+        
+#Definindo Prófase, já com cromossomos duplicados
+    def profase(self):
+        self.momento = 'Prófase'
+        self.cromossomos = 46 * 2
+        print('Célula entrou em prófase. O número de cromossomos é', self.cromossomos)
+    
+    #Definindo Metafase
+        def metafase (self):
+        self.momento = 'Metáfase'
+        print('A célula está em metáfase. Os cromossomos estão alinhando na placa equatorial')
+    #Definindo Anáfase
+    def anafase (self):
+        self.momento = 'Anáfase'
+        print('Os cromossomos estão sendo puxados para polos opostos da célula. O número de cromossomos é: ', self.cromossomos)
+    #Definindo Telófase com a formação de duas células filhas, cada uma com 46 cromossomos 
+    def telofase (self):
+        self.momento = 'Telófase'
+        print('A célula está em telófase. Duas novas células-filhas foram criadas, cada uma com 46 cromossomos.')
+
+
+c = Celula()
+
+for i in range(1):
+    c.profase()
+    c.metafase()
+    c.anafase()
+    c.telofase()
